@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ELIPCE-B7</Machine>
+    <WindowsUser>elipce</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>8a999b2d-70d1-4ef4-9bcc-3ce3bb263e66</PackageIdentityName>
+    <IntermediateOutputPath>c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\bld\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>AE2D19FBBA25E115E65B0618E47D5FD8D0E489BD8A1622D3660E683141E6873D</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>8a999b2d-70d1-4ef4-9bcc-3ce3bb263e66_1.0.0.0_neutral__peqm0bsqkvtzr</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>8a999b2d-70d1-4ef4-9bcc-3ce3bb263e66_peqm0bsqkvtzr!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>8a999b2d-70d1-4ef4-9bcc-3ce3bb263e66</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=elipce</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-10T10:05:06.016</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2015-04-10T11:51:15.986</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\images\logo.scale-100.png">
+      <PackagePath>images\logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T14:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\images\smalllogo.scale-100.png">
+      <PackagePath>images\smalllogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T14:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\images\splashscreen.scale-100.png">
+      <PackagePath>images\splashscreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T14:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\images\storelogo.scale-100.png">
+      <PackagePath>images\storelogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T14:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\js\cordova.js">
+      <PackagePath>js\cordova.js</PackagePath>
+      <Modified>2013-11-06T15:42:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2015-04-10T11:48:05.811</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2014-03-12T14:26:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\elipce\documents\visual studio 2013\Projects\App1\App1\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-04-10T10:05:05.724</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.16408</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.16408</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
