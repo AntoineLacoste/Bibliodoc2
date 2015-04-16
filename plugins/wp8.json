@@ -7,7 +7,12 @@
         "files": {
             "config.xml": {
                 "parents": {
-                    "/*": []
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"WebSql\"><param name=\"wp-package\" value=\"WebSql\" /></feature>",
+                            "count": 1
+                        }
+                    ]
                 }
             }
         }
@@ -15,6 +20,9 @@
     "installed_plugins": {
         "com.msopentech.indexedDB": {
             "PACKAGE_NAME": "{854ec560-e431-11e4-a0e3-7105ea468f42}"
+        },
+        "com.msopentech.websql": {
+            "PACKAGE_NAME": "{88186450-e43f-11e4-97ec-233265eb2825}"
         }
     },
     "dependent_plugins": {}
