@@ -4,20 +4,7 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "framework": {
-                "parents": {
-                    "AudioToolbox.framework": [],
-                    "AssetsLibrary.framework": [],
-                    "MobileCoreServices.framework": []
-                }
-            },
-            "config.xml": {
-                "parents": {
-                    "/*": []
-                }
-            }
-        }
+        "files": {}
     },
     "installed_plugins": {
         "com.msopentech.indexedDB": {
