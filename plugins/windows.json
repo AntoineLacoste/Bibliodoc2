@@ -1,0 +1,19 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.msopentech.indexedDB": {
+            "PACKAGE_NAME": "Bibliodoc"
+        }
+    },
+    "dependent_plugins": {
+        "com.msopentech.websql": {
+            "PACKAGE_NAME": "Bibliodoc"
+        }
+    }
+}

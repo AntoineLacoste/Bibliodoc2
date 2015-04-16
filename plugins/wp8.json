@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": []
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.msopentech.indexedDB": {
+            "PACKAGE_NAME": "{854ec560-e431-11e4-a0e3-7105ea468f42}"
+        }
+    },
+    "dependent_plugins": {}
+}
