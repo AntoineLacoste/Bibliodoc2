@@ -17,7 +17,6 @@
  * under the License.
  */
 var bdd="Test1";
-DeleteDatabase("Test");
 var app = {
     // Application Constructor
     initialize: function() {
