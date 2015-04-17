@@ -1,4 +1,6 @@
-﻿function CreateDatabase(nomDb, objetStructure) {
+﻿var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+
+function CreateDatabase(nomDb, objetStructure) {
 	/// <summary>
     /// Créé une BDD
 	/// </summary>
@@ -9,7 +11,7 @@
     var dbHandle = null;
     try {
         // Tentative de Connexion à la BDD
-        var req = window.indexedDB.open(nomDb, 2);
+        var req = indexedDB.open(nomDb, 2);
 
         // Création / ouverture OK
         req.onsuccess = function (e) {
@@ -59,7 +61,7 @@ function DeleteDatabase(dbName) {
 	/// </summary>
     /// <param name="dbName">nom de la BDD à suppr</param>
 
-    var dbRequest = window.indexedDB.deleteDatabase(dbName);
+    var dbRequest = indexedDB.deleteDatabase(dbName);
     dbRequest.onerror = function () { console.log("Error deleting database "+dbName); };
     dbRequest.onsuccess = function () { console.log("Database deleted "+dbName); };
     dbRequest.onblocked = function () { console.log("Database delete blocked "+dbName);};
@@ -77,7 +79,7 @@ function InsertData(nomDb, nomTable, aObjets, fctError) {
     // Gestion erreurs
     var err = (fctError===undefined?function (e){console.log("erreur InsertData table:" + nomTable+' '+e.message);}:fctError);
     // Connexion BDD
-    var db = window.indexedDB.open(nomDb);
+    var db = indexedDB.open(nomDb);
     // Connexion OK
     if (db) {
         // Callback de connexion réussi
@@ -137,7 +139,7 @@ function DeleteData(nomdB, keyObjet, nomTable, fctError) {
     // Gestion erreurs
     var err = (fctError===undefined?function (e){console.log("erreur InsertData table:" + nomTable+' '+e.message);}:fctError);
     // Connexion BDD
-    var db = window.indexedDB.open(nomdB);
+    var db = indexedDB.open(nomdB);
     // Connexion OK
     if (db) {
         // Callback de connexion réussi
@@ -169,7 +171,7 @@ function ReadAll(nomDb, nomTable, fctSuccess, fctError) {
 
 
     // Connexion BDD
-    var req = window.indexedDB.open(nomDb);
+    var req = indexedDB.open(nomDb);
     // Variables
     var aData = [];
     // Overture BDD ok
@@ -239,7 +241,7 @@ function Read(nomDb, magasins, magCondition, nomIndex, range) {
     // Promise
     return new WinJS.Promise(function (ok, ko) {
         // Connexion BDD
-        var req = window.indexedDB.open(nomDb);
+        var req = indexedDB.open(nomDb);
         // Variables
         var aData = [];
         // Overture BDD ok
