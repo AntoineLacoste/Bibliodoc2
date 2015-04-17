@@ -92,6 +92,10 @@ function InsertData(nomDb, nomTable, aObjets, fctError) {
                 for (var i in aObjets) {
                     // On lui ajoute alors l'objet voulu avec la fonction add
                     req = table.put(aObjets[i]);
+                    var a=document.createElement('p');
+                    var b=document.createTextNode('jai inséré');
+                    a.appendChild(b);
+                    document.getElementById("test").appendChild(a);
                     // On gère les erreurs qui peuvent survenir lors de l'ajout de donnée
                     req.onerror = err;
                 }
