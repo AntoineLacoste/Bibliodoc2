@@ -26,7 +26,7 @@
     "com.msopentech.indexedDB": {
         "source": {
             "type": "registry",
-            "id": "com.msopentech.indexeddb"
+            "id": "com.msopentech.indexedDB"
         }
     },
     "com.dvdbrink.cordova.indexeddb": {
