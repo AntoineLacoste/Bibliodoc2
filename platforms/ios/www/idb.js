@@ -1,5 +1,10 @@
-﻿var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
-
+﻿    var indexedDB = indexedDB || 
+                    window.mozIndexedDB ||
+                    window.webkitIndexedDB || 
+                    window.msIndexedDB || 
+                    window.shimIndexedDB;
+                    
+                    
 function CreateDatabase(nomDb, objetStructure) {
 	/// <summary>
     /// Créé une BDD
