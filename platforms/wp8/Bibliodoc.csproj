@@ -217,15 +217,4 @@
         <PostBuildEvent>
         </PostBuildEvent>
     </PropertyGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\com.msopentech.websql\WebSql.cs" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\com.msopentech.websql\SQLite.cs" />
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="Community.CsharpSqlite.WinPhone">
-            <HintPath>plugins\com.msopentech.websql\Community.CsharpSqlite.WinPhone.dll</HintPath>
-        </Reference>
-    </ItemGroup>
 </Project>

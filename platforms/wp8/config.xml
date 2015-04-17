@@ -9,7 +9,4 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <feature name="WebSql">
-        <param name="wp-package" value="WebSql" />
-    </feature>
 </widget>

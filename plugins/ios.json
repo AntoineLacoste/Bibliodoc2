@@ -4,13 +4,23 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "framework": {
+                "parents": {
+                    "AudioToolbox.framework": [],
+                    "AssetsLibrary.framework": [],
+                    "MobileCoreServices.framework": []
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": []
+                }
+            }
+        }
     },
     "installed_plugins": {
         "com.msopentech.indexedDB": {
-            "PACKAGE_NAME": "com.bibliodoc"
-        },
-        "com.msopentech.websql": {
             "PACKAGE_NAME": "com.bibliodoc"
         }
     },
