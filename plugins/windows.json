@@ -7,13 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.msopentech.indexedDB": {
+        "com.dvdbrink.cordova.indexeddb": {
             "PACKAGE_NAME": "Bibliodoc"
         }
     },
-    "dependent_plugins": {
-        "com.msopentech.websql": {
-            "PACKAGE_NAME": "Bibliodoc"
-        }
-    }
+    "dependent_plugins": {}
 }

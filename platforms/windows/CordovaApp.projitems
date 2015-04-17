@@ -11,25 +11,4 @@
     <ItemGroup>
         <Content Include="$(MSBuildThisFileDirectory)config.xml" />
     </ItemGroup>
-    <ItemGroup>
-        <Reference Include="SQLite.Proxy">
-            <HintPath>plugins\com.msopentech.websql\SQLite.Proxy.winmd</HintPath>
-            <IsWinMDFile>true</IsWinMDFile>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="Community.CsharpSqlite.WinRT">
-            <HintPath>plugins\com.msopentech.websql\Community.CsharpSqlite.WinRT.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="Community.CsharpSqlite.SQLiteClient.WinRT">
-            <HintPath>plugins\com.msopentech.websql\Community.CsharpSqlite.SQLiteClient.WinRT.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="System.Data.Ersatz.WinRT">
-            <HintPath>plugins\com.msopentech.websql\System.Data.Ersatz.WinRT.dll</HintPath>
-        </Reference>
-    </ItemGroup>
 </Project>
