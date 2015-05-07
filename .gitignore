@@ -1,0 +1,10 @@
+*~
+**~
+
+platforms/**
+
+node_modules
+src
+
+.idea
+*.iml

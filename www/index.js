@@ -26,7 +26,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-       if(navigator.userAgent.match(/Chrome|Trident|Safari/)){
+       if(navigator.userAgent.match(/Chrome|Trident/)){
             app.onDeviceReady();
         }
         else{
@@ -65,17 +65,7 @@ function testIDB(){
 
 function testID(){
     DeleteDatabase("idarticle_people");
-
-    var aStruct = {
-        'people': [['name', false], ['email', false], ['created', false]]
-    }
-    CreateDatabase("idarticle_people",aStruct);
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
-    var openRequest = IDB.open("idarticle_people");
+    var openRequest = indexedDB.open("idarticle_people",1);
  
     openRequest.onupgradeneeded = function(e) {
         var thisDB = e.target.result;
@@ -83,7 +73,6 @@ function testID(){
         if(!thisDB.objectStoreNames.contains("people")) {
             thisDB.createObjectStore("people",{autoIncrement:true});
         }
-    }
     openRequest.onsuccess = function(e) {
 
     
@@ -95,13 +84,17 @@ function testID(){
         document.getElementById("addButton").addEventListener("click", addPerson, false);
     }
 }
-
+}
 
 function addPerson(e) {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
  
     console.log("About to add "+name+"/"+email);
+ 
+    var transaction = db.transaction(["people"],"readwrite");
+    var store = transaction.objectStore("people",{autoIncrement:true});
+ 
     //Define a person
     var person = {
         name:name,
@@ -110,17 +103,25 @@ function addPerson(e) {
     }
  
     //Perform the add
-    InsertData("idarticle_people","people",[person]);
-    var a=document.createElement("p");
-    var b=document.createTextNode('ajout effectué');
-    a.appendChild(b);
-    document.getElementById("anduin").appendChild(a);
-
-                        
+    var request = store.add(person);
+ 
+    request.onerror = function(e) {
+        console.log("Error",e.target.error.name);
+        //some type of error handler
     }
+ 
+    request.onsuccess = function(e) {
+        var a=document.createElement("p");
+        var b=document.createTextNode('ajout effectué');
+        a.appendChild(b);
+        document.getElementById("anduin").appendChild(a);
+
+    }
+}
 
 
 function InsertDataTest() {
+    console.log('jinsere');
     InsertData("Test", 'utilisateur', [{ "nom": "ELIPCE", "prenom": "Informatique", "date_naissance": "2014-07-23", "mail": "yann.plantevin@elipce.com", "login": "elipce", "pwd": "7e54dad3d4b787512e80e6058a01ccecfef6b188", "first_conn": "0", "societe_id": 1 },
                                                 { "nom": "PEREZ", "prenom": "Vivian", "date_naissance": "1985-02-26", "mail": "vivian.perez@elipce.com", "login": "viv", "pwd": "", "societe_id": 1, "item1": "a", "item2": "b" }]);
 
