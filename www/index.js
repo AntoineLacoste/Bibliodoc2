@@ -70,6 +70,7 @@ function testID(){
         window.webkitIndexedDB ||
         window.msIndexedDB ||
         window.shimIndexedDB;
+
     var openRequest = IDB.open("idarticle_people",1);
  
     openRequest.onupgradeneeded = function(e) {
@@ -126,7 +127,6 @@ function addPerson(e) {
 
 
 function InsertDataTest() {
-    console.log('jinsere');
     InsertData("Test", 'utilisateur', [{ "nom": "ELIPCE", "prenom": "Informatique", "date_naissance": "2014-07-23", "mail": "yann.plantevin@elipce.com", "login": "elipce", "pwd": "7e54dad3d4b787512e80e6058a01ccecfef6b188", "first_conn": "0", "societe_id": 1 },
                                                 { "nom": "PEREZ", "prenom": "Vivian", "date_naissance": "1985-02-26", "mail": "vivian.perez@elipce.com", "login": "viv", "pwd": "", "societe_id": 1, "item1": "a", "item2": "b" }]);
 
