@@ -26,7 +26,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-       if(navigator.userAgent.match(/Chrome|Trident/)){
+       if(navigator.userAgent.match(/Chrome|Trident|Safari/)){
             app.onDeviceReady();
         }
         else{
@@ -65,21 +65,25 @@ function testIDB(){
 
 function testID(){
     DeleteDatabase("idarticle_people");
+
+    var aStruct = {
+        'people': [['name', false], ['email', false], ['created', false]]
+    }
+    CreateDatabase("idarticle_people",aStruct);
     var IDB = window.indexedDB ||
         window.mozIndexedDB ||
         window.webkitIndexedDB ||
         window.msIndexedDB ||
         window.shimIndexedDB;
-
-    var openRequest = IDB.open("idarticle_people",1);
+    var openRequest = IDB.open("idarticle_people");
  
     openRequest.onupgradeneeded = function(e) {
         var thisDB = e.target.result;
  
         if(!thisDB.objectStoreNames.contains("people")) {
-            console.log("people existe pas je la créée");
             thisDB.createObjectStore("people",{autoIncrement:true});
         }
+    }
     openRequest.onsuccess = function(e) {
 
     
@@ -91,17 +95,13 @@ function testID(){
         document.getElementById("addButton").addEventListener("click", addPerson, false);
     }
 }
-}
+
 
 function addPerson(e) {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
  
     console.log("About to add "+name+"/"+email);
- 
-    var transaction = db.transaction(["people"],"readwrite");
-    var store = transaction.objectStore("people",{autoIncrement:true});
- 
     //Define a person
     var person = {
         name:name,
@@ -110,21 +110,14 @@ function addPerson(e) {
     }
  
     //Perform the add
-    var request = store.add(person);
- 
-    request.onerror = function(e) {
-        console.log("Error",e.target.error.name);
-        //some type of error handler
-    }
- 
-    request.onsuccess = function(e) {
-        var a=document.createElement("p");
-        var b=document.createTextNode('ajout effectué');
-        a.appendChild(b);
-        document.getElementById("anduin").appendChild(a);
+    InsertData("idarticle_people","people",[person]);
+    var a=document.createElement("p");
+    var b=document.createTextNode('ajout effectué');
+    a.appendChild(b);
+    document.getElementById("anduin").appendChild(a);
 
+                        
     }
-}
 
 
 function InsertDataTest() {

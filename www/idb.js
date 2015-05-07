@@ -14,8 +14,7 @@
             window.webkitIndexedDB ||
             window.msIndexedDB ||
             window.shimIndexedDB;
-
-        var req = IDB.open(nomDb, 1);
+        var req = IDB.open(nomDb, 2);
 
         // Création / ouverture OK
         req.onsuccess = function (e) {
@@ -64,12 +63,7 @@ function DeleteDatabase(dbName) {
     /// </summary>
     /// <param name="dbName">nom de la BDD à suppr</param>
 
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
-    var dbRequest = IDB.deleteDatabase(dbName);
+    var dbRequest = window.indexedDB.deleteDatabase(dbName);
     dbRequest.onerror = function () { console.log("Error deleting database "+dbName); };
     dbRequest.onsuccess = function () { console.log("Database deleted "+dbName); };
     dbRequest.onblocked = function () { console.log("Database delete blocked "+dbName);};
@@ -356,11 +350,3 @@ function Read(nomDb, magasins, magCondition, nomIndex, range) {
 function HandleException(ex, msg) {
     console.log("EXCEPTION: " + ex.message+'\n'+msg);
 }
-//
-//module.exports.CreateDatabase = CreateDatabase;
-//module.exports.DeleteDatabase = DeleteDatabase;
-//module.exports.InsertData = InsertData;
-//module.exports.UpdateData = UpdateData;
-//module.exports.DeleteData = DeleteData;
-//module.exports.ReadAll = ReadAll;
-//module.exports.Read = Read;
