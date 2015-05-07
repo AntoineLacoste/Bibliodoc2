@@ -77,6 +77,7 @@ function testID(){
         var thisDB = e.target.result;
  
         if(!thisDB.objectStoreNames.contains("people")) {
+            console.log("people existe pas je la créée");
             thisDB.createObjectStore("people",{autoIncrement:true});
         }
     openRequest.onsuccess = function(e) {
