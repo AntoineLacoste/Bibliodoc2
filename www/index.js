@@ -65,7 +65,12 @@ function testIDB(){
 
 function testID(){
     DeleteDatabase("idarticle_people");
-    var openRequest = indexedDB.open("idarticle_people",1);
+    var IDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB ||
+        window.shimIndexedDB;
+    var openRequest = IDB.open("idarticle_people",1);
  
     openRequest.onupgradeneeded = function(e) {
         var thisDB = e.target.result;

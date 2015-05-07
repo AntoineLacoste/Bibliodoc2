@@ -10,15 +10,12 @@
 
     try {
         // Tentative de Connexion à la BDD
-        var req;
-        if (window.indexedDB) {
-            console.log('Opening Native IndexedDB');
-            req = window.indexedDB.open(nomDb,2);
-        }
-        else {
-            console.log('Opening IndexedDB Shimm');
-            req = window.shimIndexedDB.open(nomDb,2);
-        }
+        var IDB = window.indexedDB ||
+            window.mozIndexedDB ||
+            window.webkitIndexedDB ||
+            window.msIndexedDB ||
+            window.shimIndexedDB;
+        var req= IDB.open(nomDb,2);
 
         // Création / ouverture OK
         req.onsuccess = function (e) {
@@ -69,8 +66,12 @@ function DeleteDatabase(dbName) {
     /// Suppression BDD
 	/// </summary>
     /// <param name="dbName">nom de la BDD à suppr</param>
-
-    var dbRequest = window.indexedDB.deleteDatabase(dbName);
+    var IDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB ||
+        window.shimIndexedDB;
+    var dbRequest = IDB.deleteDatabase(dbName);
     dbRequest.onerror = function () { console.log("Error deleting database "+dbName); };
     dbRequest.onsuccess = function () { console.log("Database deleted "+dbName); };
     dbRequest.onblocked = function () { console.log("Database delete blocked "+dbName);};
@@ -88,15 +89,12 @@ function InsertData(nomDb, nomTable, aObjets, fctError) {
     // Gestion erreurs
     var err = (fctError===undefined?function (e){console.log("erreur InsertData table:" + nomTable+' '+e.message);}:fctError);
     // Connexion BDD
-        var db;
-        if (window.indexedDB) {
-            console.log('Opening Native IndexedDB');
-            db = window.indexedDB.open(nomDb);
-        }
-        else {
-            console.log('Opening IndexedDB Shimm');
-            db = window.shimIndexedDB.open(nomDb);
-        }
+    var IDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB ||
+        window.shimIndexedDB;
+    var db= IDB.open(nomDb);
     // Connexion OK
     if (db) {
         // Callback de connexion réussi
@@ -156,15 +154,12 @@ function DeleteData(nomdB, keyObjet, nomTable, fctError) {
     // Gestion erreurs
     var err = (fctError===undefined?function (e){console.log("erreur InsertData table:" + nomTable+' '+e.message);}:fctError);
     // Connexion BDD
-        var db;
-        if (window.indexedDB) {
-            console.log('Opening Native IndexedDB');
-            db = window.indexedDB.open(nomDb);
-        }
-        else {
-            console.log('Opening IndexedDB Shimm');
-            db = window.shimIndexedDB.open(nomDb);
-        }
+    var IDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB ||
+        window.shimIndexedDB;
+    var db= IDB.open(nomdB);
     // Connexion OK
     if (db) {
         // Callback de connexion réussi
@@ -196,15 +191,12 @@ function ReadAll(nomDb, nomTable, fctSuccess, fctError) {
 
 
     // Connexion BDD
-        var req;
-        if (window.indexedDB) {
-            console.log('Opening Native IndexedDB');
-            req = window.indexedDB.open(nomDb);
-        }
-        else {
-            console.log('Opening IndexedDB Shimm');
-            req = window.shimIndexedDB.open(nomDb);
-        }
+    var IDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB ||
+        window.shimIndexedDB;
+    var req = IDB.open(nomDb);
     // Variables
     var aData = [];
     // Overture BDD ok
@@ -274,15 +266,12 @@ function Read(nomDb, magasins, magCondition, nomIndex, range) {
     // Promise
     return new Promise(function (ok, ko) {
         // Connexion BDD
-        var req;
-        if (window.indexedDB) {
-            console.log('Opening Native IndexedDB');
-            req = window.indexedDB.open(nomDb);
-        }
-        else {
-            console.log('Opening IndexedDB Shimm');
-            req = window.shimIndexedDB.open(nomDb);
-        }
+        var IDB = window.indexedDB ||
+            window.mozIndexedDB ||
+            window.webkitIndexedDB ||
+            window.msIndexedDB ||
+            window.shimIndexedDB;
+        var req = IDB.open(nomDb);
         // Variables
         var aData = [];
         // Overture BDD ok
