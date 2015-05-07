@@ -76,14 +76,7 @@ function testID(){
         window.msIndexedDB ||
         window.shimIndexedDB;
     var openRequest = IDB.open("idarticle_people");
- 
-    openRequest.onupgradeneeded = function(e) {
-        var thisDB = e.target.result;
- 
-        if(!thisDB.objectStoreNames.contains("people")) {
-            thisDB.createObjectStore("people",{autoIncrement:true});
-        }
-    }
+
     openRequest.onsuccess = function(e) {
 
     
