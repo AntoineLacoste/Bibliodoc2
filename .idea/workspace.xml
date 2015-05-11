@@ -37,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
+            <state vertical-scroll-proportion="1.0320089" vertical-offset="0" max-vertical-offset="2125">
               <caret line="55" column="89" selection-start-line="55" selection-start-column="89" selection-end-line="55" selection-end-column="89" />
               <folding />
             </state>
@@ -50,35 +50,9 @@
       <file leaf-file-name="idb.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/idb.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="6171">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6171">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexeddbshim.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/indexeddbshim.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5179543" vertical-offset="35564" max-vertical-offset="49861">
-              <caret line="2120" column="50" selection-start-line="2120" selection-start-column="50" selection-end-line="2120" selection-end-column="50" />
-              <folding>
-                <marker date="1430385413565" expanded="true" signature="65015:65062" placeholder="UPDATE __sys..." />
-                <marker date="1430385413565" expanded="true" signature="72594:72630" placeholder="INSERT INTO ..." />
-                <marker date="1430385413565" expanded="true" signature="73677:73713" placeholder="SELECT * FRO..__sys__..." />
-                <marker date="1430385413565" expanded="true" signature="73936:73970" placeholder="DELETE FROM ..." />
-                <marker date="1430385413565" expanded="true" signature="76402:76449" placeholder="SELECT * FRO..sqlite_sequence..." />
-                <marker date="1430385413565" expanded="true" signature="101147:101217" placeholder="CREATE TABLE..dbVersions..." />
-                <marker date="1430385413565" expanded="true" signature="103278:103387" placeholder="CREATE TABLE..__sys__..." />
-                <marker date="1430385413565" expanded="true" signature="103442:103463" placeholder="SELECT * FRO..__sys__..." />
-                <marker date="1430385413565" expanded="true" signature="103886:103934" placeholder="UPDATE dbVer..." />
-                <marker date="1430385413565" expanded="true" signature="105478:105517" placeholder="SELECT * FRO..dbVersions..." />
-                <marker date="1430385413565" expanded="true" signature="105704:105739" placeholder="INSERT INTO ..." />
-                <marker date="1430385413565" expanded="true" signature="107089:107126" placeholder="DELETE FROM ..." />
-                <marker date="1430385413565" expanded="true" signature="107595:107634" placeholder="SELECT * FRO..dbVersions..." />
-                <marker date="1430385413565" expanded="true" signature="108282:108303" placeholder="SELECT * FRO..__sys__..." />
-                <marker date="1430385413565" expanded="true" signature="108645:108673" placeholder="DROP TABLE I..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -93,8 +67,8 @@
       <list>
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/index.js" />
-        <option value="$PROJECT_DIR$/www/idb.js" />
         <option value="$PROJECT_DIR$/www/indexeddbshim.js" />
+        <option value="$PROJECT_DIR$/www/idb.js" />
       </list>
     </option>
   </component>
@@ -343,22 +317,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
-          <caret line="55" column="89" selection-start-line="55" selection-start-column="89" selection-end-line="55" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/idb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="6171">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/icon.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -366,25 +324,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/indexeddbshim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5179543" vertical-offset="35564" max-vertical-offset="49861">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34289" max-vertical-offset="49861">
           <caret line="2120" column="50" selection-start-line="2120" selection-start-column="50" selection-end-line="2120" selection-end-column="50" />
           <folding>
-            <marker date="1430385413565" expanded="true" signature="65015:65062" placeholder="UPDATE __sys..." />
-            <marker date="1430385413565" expanded="true" signature="72594:72630" placeholder="INSERT INTO ..." />
-            <marker date="1430385413565" expanded="true" signature="73677:73713" placeholder="SELECT * FRO..__sys__..." />
-            <marker date="1430385413565" expanded="true" signature="73936:73970" placeholder="DELETE FROM ..." />
-            <marker date="1430385413565" expanded="true" signature="76402:76449" placeholder="SELECT * FRO..sqlite_sequence..." />
-            <marker date="1430385413565" expanded="true" signature="101147:101217" placeholder="CREATE TABLE..dbVersions..." />
-            <marker date="1430385413565" expanded="true" signature="103278:103387" placeholder="CREATE TABLE..__sys__..." />
-            <marker date="1430385413565" expanded="true" signature="103442:103463" placeholder="SELECT * FRO..__sys__..." />
-            <marker date="1430385413565" expanded="true" signature="103886:103934" placeholder="UPDATE dbVer..." />
-            <marker date="1430385413565" expanded="true" signature="105478:105517" placeholder="SELECT * FRO..dbVersions..." />
-            <marker date="1430385413565" expanded="true" signature="105704:105739" placeholder="INSERT INTO ..." />
-            <marker date="1430385413565" expanded="true" signature="107089:107126" placeholder="DELETE FROM ..." />
-            <marker date="1430385413565" expanded="true" signature="107595:107634" placeholder="SELECT * FRO..dbVersions..." />
-            <marker date="1430385413565" expanded="true" signature="108282:108303" placeholder="SELECT * FRO..__sys__..." />
-            <marker date="1430385413565" expanded="true" signature="108645:108673" placeholder="DROP TABLE I..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="UPDATE __sys..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..sqlite_sequence..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..dbVersions..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..__sys__..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="UPDATE dbVer..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1430385413565" expanded="true" signature="-1:-1" placeholder="DROP TABLE I..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/idb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6171">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0320089" vertical-offset="0" max-vertical-offset="2125">
+          <caret line="55" column="89" selection-start-line="55" selection-start-column="89" selection-end-line="55" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>
