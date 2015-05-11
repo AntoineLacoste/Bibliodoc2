@@ -42,6 +42,7 @@ function testID(){
         window.webkitIndexedDB ||
         window.msIndexedDB ||
         window.shimIndexedDB;
+
     var openRequest = IDB.open("idarticle_people");
 
     openRequest.onsuccess = function(e) {

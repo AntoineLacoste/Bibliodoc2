@@ -14,6 +14,7 @@
             window.webkitIndexedDB ||
             window.msIndexedDB ||
             window.shimIndexedDB;
+        setTimeout(function(){
         var req = IDB.open(nomDb, 2);
 
         // Création / ouverture OK
@@ -49,7 +50,7 @@
 
             }
             console.log('Upgrade BDD');
-        }
+        }}, 2000);
     }
     catch (ex) {
         // Affichage message erreur
@@ -155,6 +156,7 @@ function DeleteData(nomdB, keyObjet, nomTable, fctError) {
         window.webkitIndexedDB ||
         window.msIndexedDB ||
         window.shimIndexedDB;
+
     var db = IDB.open(nomdB);
     // Connexion OK
     if (db) {
