@@ -62,8 +62,12 @@ function DeleteDatabase(dbName) {
     /// Suppression BDD
     /// </summary>
     /// <param name="dbName">nom de la BDD à suppr</param>
-
-    var dbRequest = window.indexedDB.deleteDatabase(dbName);
+    var IDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB ||
+        window.shimIndexedDB;
+    var dbRequest = IDB.deleteDatabase(dbName);
     dbRequest.onerror = function () { console.log("Error deleting database "+dbName); };
     dbRequest.onsuccess = function () { console.log("Database deleted "+dbName); };
     dbRequest.onblocked = function () { console.log("Database delete blocked "+dbName);};
