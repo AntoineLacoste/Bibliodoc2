@@ -15,7 +15,7 @@
             window.msIndexedDB ||
             window.shimIndexedDB;
 
-        var req = IDB.open(nomDb);
+        var req = IDB.open(nomDb,1);
 
         // Création / ouverture OK
         req.onsuccess = function (e) {
