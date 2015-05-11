@@ -15,7 +15,7 @@
             window.msIndexedDB ||
             window.shimIndexedDB;
 
-        var req = IDB.open(nomDb,1);
+        var req = IDB.open(nomDb,3);
 
         // Création / ouverture OK
         req.onsuccess = function (e) {
@@ -28,6 +28,9 @@
 
         // Création / ouverture bloquée
         req.onblocked = function (e) { console.log('blocked BDD'); }
+
+
+        req.onerror = function(e) {console.log("rror");}
 
         // Si la BDD n'existe pas => Création structure BDD
         req.onupgradeneeded = function (e) {

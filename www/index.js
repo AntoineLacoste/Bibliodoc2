@@ -31,7 +31,7 @@ function testIDB(){
 }
 
 function testID(){
-    //DeleteDatabase("idarticle_people");
+    DeleteDatabase("idarticle_people");
 
     var aStruct = {
         'people': [['name', false], ['email', false], ['created', false]]
