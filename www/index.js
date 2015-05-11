@@ -37,7 +37,14 @@ function testID(){
         'people': [['name', false], ['email', false], ['created', false]]
     }
     CreateDatabase("idarticle_people",aStruct);
-    var openRequest = indexedDB.open("idarticle_people");
+
+    var IDB = window.indexedDB ||
+        window.mozIndexedDB ||
+        window.webkitIndexedDB ||
+        window.msIndexedDB ||
+        window.shimIndexedDB;
+
+    var openRequest = IDB.open("idarticle_people");
 
     openRequest.onupgradeneeded = function(e) {
 
