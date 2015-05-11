@@ -32,29 +32,31 @@ function testIDB(){
 
 function testID(){
     DeleteDatabase("idarticle_people");
-
+}
     var aStruct = {
         'people': [['name', false], ['email', false], ['created', false]]
     }
     CreateDatabase("idarticle_people",aStruct);
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
+    var openRequest = indexedDB.open("idarticle_people");
 
-    var openRequest = IDB.open("idarticle_people");
+    openRequest.onupgradeneeded = function(e) {
 
+        var thisDB = e.target.result;
+
+        if(!thisDB.objectStoreNames.contains("people")) {
+            thisDB.createObjectStore("people",{autoIncrement:true});
+        }
+        console.log("table people créer");
+    }
     openRequest.onsuccess = function(e) {
 
-    
+
         console.log("running onsuccess");
- 
+
         db = e.target.result;
- 
+
         //Listen for add clicks
         document.getElementById("addButton").addEventListener("click", addPerson, false);
-    }
 }
 
 

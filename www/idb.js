@@ -194,6 +194,7 @@ function ReadAll(nomDb, nomTable, fctSuccess, fctError) {
         window.webkitIndexedDB ||
         window.msIndexedDB ||
         window.shimIndexedDB;
+
     var req = IDB.open(nomDb);
     // Variables
     var aData = [];
@@ -269,6 +270,7 @@ function Read(nomDb, magasins, magCondition, nomIndex, range) {
             window.webkitIndexedDB ||
             window.msIndexedDB ||
             window.shimIndexedDB;
+
         var req = IDB.open(nomDb);
         // Variables
         var aData = [];
