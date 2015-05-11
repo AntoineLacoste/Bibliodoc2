@@ -32,6 +32,7 @@ function testIDB(){
 
 function testID(){
     DeleteDatabase("idarticle_people");
+
     var aStruct = {
         'people': [['name', false], ['email', false], ['created', false]]
     }
@@ -43,20 +44,8 @@ function testID(){
         window.msIndexedDB ||
         window.shimIndexedDB;
 
-    var openRequest = IDB.open("idarticle_people",2);
+    var openRequest = IDB.open("idarticle_people");
 
-    openRequest.onupgradeneeded = function(e) {
-
-        var thisDB = e.target.result;
-
-        if(!thisDB.objectStoreNames.contains("people")) {
-            console.log("table people a créer");
-            thisDB.createObjectStore("people",{autoIncrement:true});
-        }
-        else{
-            console.log("table people est deja créer");
-        }
-    }
     openRequest.onsuccess = function(e) {
 
 
