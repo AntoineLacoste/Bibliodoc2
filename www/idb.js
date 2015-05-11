@@ -14,7 +14,7 @@
             window.webkitIndexedDB ||
             window.msIndexedDB ||
             window.shimIndexedDB;
-        setTimeout(function(){
+
         var req = IDB.open(nomDb, 2);
 
         // Création / ouverture OK
@@ -50,7 +50,7 @@
 
             }
             console.log('Upgrade BDD');
-        }}, 2000);
+        }
     }
     catch (ex) {
         // Affichage message erreur
