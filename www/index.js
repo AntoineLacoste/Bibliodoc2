@@ -3,7 +3,7 @@
     "use strict";
     document.addEventListener("DOMContentLoaded", function(event) {
         console.log("" + navigator.userAgent);
-        if (navigator.userAgent.match(/iPhone|IEMobile|Android/)) {
+        if (navigator.userAgent.match(/iPad|iPhone|IEMobile|Android/)) {
             document.addEventListener("deviceready", onReady, false);
         }
         else {
@@ -60,8 +60,8 @@ function testID(){
     }
     openRequest.onblocked = function (e) { console.log('blocked BDD'); }
 
-    openRequest.onerror = function(e) {console.log("error");}}
-    ,2000);
+    openRequest.onerror = function(e) {console.log("error");}
+        },1000);
 }
 
 
