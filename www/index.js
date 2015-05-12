@@ -49,7 +49,7 @@ function testID(){
 
     openRequest.onupgradeneeded = function(e) {
 
-        var thisDB = e.target.result;
+        var thisDB = e.currentTarget.result;
 
         thisDB.createObjectStore("people",{autoIncrement:true});
 
@@ -61,7 +61,7 @@ function testID(){
 
         console.log("running onsuccess");
 
-        db = e.currentTarget.result;
+        db = e.target.result;
 
         //Listen for add clicks
         document.getElementById("addButton").addEventListener("click", addPerson, false);
