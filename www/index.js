@@ -3,7 +3,7 @@
     "use strict";
     document.addEventListener("DOMContentLoaded", function(event) {
         console.log("" + navigator.userAgent);
-        if (navigator.userAgent.match(/iPad|iPhone|IEMobile|Android/)) {
+        if (navigator.userAgent.match(/iPhone|IEMobile|Android/)) {
             document.addEventListener("deviceready", onReady, false);
         }
         else {
@@ -17,8 +17,8 @@
         }
 
     })();
-// Pour obtenir une présentation du modèle Navigation, consultez la documentation suivante :
-// http://go.microsoft.com/fwlink/?LinkId=232506
+
+
 function testIDB(){
 
                 //// Suppression BDD
@@ -31,12 +31,14 @@ function testIDB(){
 }
 
 function testID(){
-    DeleteDatabase("idarticle_people");
+    shimIndexedDB.__useShim();
+    setTimeout(function(){
+    //DeleteDatabase("idarticle_people");
 
-    //var aStruct = {
-    //    'people': [['name', false], ['email', false], ['created', false]]
-    //}
-    //CreateDatabase("idarticle_people",aStruct);
+    var aStruct = {
+        'people': [['name', false], ['email', false], ['created', false]]
+    }
+    CreateDatabase("idarticle_people",aStruct);
 
     var IDB = window.indexedDB ||
         window.mozIndexedDB ||
@@ -44,20 +46,8 @@ function testID(){
         window.msIndexedDB ||
         window.shimIndexedDB;
 
-    var openRequest = IDB.open("idarticle_people",2);
+    var openRequest = IDB.open("idarticle_people");
 
-    openRequest.onupgradeneeded = function(e) {
-
-        var thisDB = e.target.result;
-
-        if(!thisDB.objectStoreNames.contains("people")) {
-            console.log("table people a créer");
-            thisDB.createObjectStore("people",{autoIncrement:true});
-        }
-        else{
-            console.log("table people est deja créer");
-        }
-    }
     openRequest.onsuccess = function(e) {
 
 
@@ -68,6 +58,10 @@ function testID(){
         //Listen for add clicks
         document.getElementById("addButton").addEventListener("click", addPerson, false);
     }
+    openRequest.onblocked = function (e) { console.log('blocked BDD'); }
+
+    openRequest.onerror = function(e) {console.log("error");}}
+    ,2000);
 }
 
 

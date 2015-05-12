@@ -29,10 +29,8 @@
         // Création / ouverture bloquée
         req.onblocked = function (e) { console.log('blocked BDD'); }
 
-
-        req.onerror = function(e) {console.log("rror");}
-
         // Si la BDD n'existe pas => Création structure BDD
+        console.log("je vais upgrade");
         req.onupgradeneeded = function (e) {
             // Récupération de la connexion
             dbHandle = e.target.result;
