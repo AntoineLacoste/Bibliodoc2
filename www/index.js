@@ -31,25 +31,25 @@ function testIDB(){
 }
 
 function testID(){
-    window.shimIndexedDB.__useShim();
-    //DeleteDatabase("idarticle_people");
+    //window.shimIndexedDB.__useShim();
+    DeleteDatabase("MyDatabase");
     //
-    var aStruct = {
-        'MyObjectStore': [['id', false], ['first', false], ['last', false], ['age', false]]
-    }
-    CreateDatabase("MyDatabase",aStruct);
+    //var aStruct = {
+    //    'MyObjectStore': [['id', false], ['name', false], ['last', false]]
+    //}
+    //CreateDatabase("MyDatabase",aStruct);
 
     var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
-// Open (or create) the database
-    var open = indexedDB.open("MyDatabase");
+    // Open (or create) the database
+    var open = indexedDB.open("MyDatabase", 1);
 
-//// Create the schema
-//    open.onupgradeneeded = function() {
-//        var db = open.result;
-//        //var store = db.createObjectStore("MyObjectStore", {keyPath: "id"});
-//        //var index = store.createIndex("NameIndex", ["name.last", "name.first"]);
-//    };
+    // Create the schema
+    open.onupgradeneeded = function() {
+        var db = open.result;
+        var store = db.createObjectStore("MyObjectStore", {keyPath: "id"});
+        var index = store.createIndex("NameIndex", ["name.last", "name.first"]);
+    };
 
     open.onsuccess = function() {
         // Start a new transaction
@@ -67,11 +67,11 @@ function testID(){
         var getBob = index.get(["Smith", "Bob"]);
 
         getJohn.onsuccess = function() {
-            console.log(getJohn.result.name.first +" "+ getJohn.result.name.last);  // => "John"
+            console.log(getJohn.result.name.first);  // => "John"
         };
 
         getBob.onsuccess = function() {
-            console.log(getBob.result.name.first +" "+ getBob.result.name.last);   // => "Bob"
+            console.log(getBob.result.name.first);   // => "Bob"
         };
 
         // Close the db when the transaction is done
@@ -79,6 +79,8 @@ function testID(){
             db.close();
         };
     }
+
+
 }
 
 

@@ -1843,6 +1843,8 @@ var idbModules = {  // jshint ignore:line
 
         // Add the object store to WebSQL
         var transaction = db.__versionTransaction;
+        console.log('db : %o',db);
+        console.log('store : %o',store);
         idbModules.IDBTransaction.__assertVersionChange(transaction);
         transaction.__addToTransactionQueue(function createObjectStore(tx, args, success, failure) {
             function error(tx, err) {

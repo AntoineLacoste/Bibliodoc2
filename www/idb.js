@@ -6,22 +6,19 @@
     /// <param name="objetStructure">{ 'table1': [ [champ1,bUnique], ... ], ...}</param>
 
     // Variables
-    var dbHandle = null;
+    var db = null;
     try {
         // Tentative de Connexion à la BDD
-        var IDB = window.indexedDB ||
-            window.mozIndexedDB ||
-            window.webkitIndexedDB ||
-            window.msIndexedDB ||
-            window.shimIndexedDB;
+
+        var IDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
         var req = IDB.open(nomDb,4);
 
         // Création / ouverture OK
         req.onsuccess = function (e) {
-            dbHandle = e.target.result;
+            db = e.target.result;
             console.log('succes creation BDD');
-            dbHandle.close();
+            db.close();
         }
         // Création / ouverture KO
         req.onerror = function (e) { console.log('error creation BDD'); }
@@ -32,16 +29,15 @@
         // Si la BDD n'existe pas => Création structure BDD
         req.onupgradeneeded = function (e) {
             // Récupération de la connexion
-            dbHandle = e.target.result;
+            db = req.result;
+            //console.log('db : %o',db);
 
             var store;
             // Parcours des magasins (tables en SQL)
             for (var nomStore in objetStructure) {
                 var aIndex = objetStructure[nomStore];
                 // Création magasin
-                console.log("target : %o",dbHandle);
-                console.log("currentTarget : %o",e.currentTarget.result);
-                store = e.currentTarget.result.createObjectStore(nomStore, { keyPath: "id", autoIncrement: true });
+                store = db.createObjectStore(nomStore, { keyPath: "id", autoIncrement: true });
                 // Parcours des index du magasin (champs en SQL)
                 for (var index in aIndex) {
                     //console.log(aIndex[index][0]);
@@ -65,11 +61,9 @@ function DeleteDatabase(dbName) {
     /// Suppression BDD
     /// </summary>
     /// <param name="dbName">nom de la BDD à suppr</param>
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
+
+    var IDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+
     var dbRequest = IDB.deleteDatabase(dbName);
     dbRequest.onerror = function () { console.log("Error deleting database "+dbName); };
     dbRequest.onsuccess = function () { console.log("Database deleted "+dbName); };
@@ -88,11 +82,9 @@ function InsertData(nomDb, nomTable, aObjets, fctError) {
     // Gestion erreurs
     var err = (fctError===undefined?function (e){console.log("erreur InsertData table:" + nomTable+' '+e.message);}:fctError);
     // Connexion BDD
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
+
+    var IDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+
     var db = IDB.open(nomDb);
     // Connexion OK
     if (db) {
@@ -107,7 +99,7 @@ function InsertData(nomDb, nomTable, aObjets, fctError) {
                 // Parcours des objets à insérer
                 for (var i in aObjets) {
                     // On lui ajoute alors l'objet voulu avec la fonction add
-                    req = table.add(aObjets[i]);
+                    req = table.put(aObjets[i]);
                     // On gère les erreurs qui peuvent survenir lors de l'ajout de donnée
                     req.onerror = err;
                 }
@@ -153,11 +145,8 @@ function DeleteData(nomdB, keyObjet, nomTable, fctError) {
     // Gestion erreurs
     var err = (fctError===undefined?function (e){console.log("erreur InsertData table:" + nomTable+' '+e.message);}:fctError);
     // Connexion BDD
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
+
+    var IDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
     var db = IDB.open(nomdB);
     // Connexion OK
@@ -191,11 +180,8 @@ function ReadAll(nomDb, nomTable, fctSuccess, fctError) {
 
 
     // Connexion BDD
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
+
+    var IDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
     var req = IDB.open(nomDb);
     // Variables
@@ -267,11 +253,8 @@ function Read(nomDb, magasins, magCondition, nomIndex, range) {
     // Promise
     return new WinJS.Promise(function (ok, ko) {
         // Connexion BDD
-        var IDB = window.indexedDB ||
-            window.mozIndexedDB ||
-            window.webkitIndexedDB ||
-            window.msIndexedDB ||
-            window.shimIndexedDB;
+
+        var IDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
         var req = IDB.open(nomDb);
         // Variables
