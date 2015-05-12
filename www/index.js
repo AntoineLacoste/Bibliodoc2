@@ -31,13 +31,13 @@ function testIDB(){
 }
 
 function testID(){
-    shimIndexedDB.__useShim();
-    //DeleteDatabase("idarticle_people");
+    //shimIndexedDB.__useShim();
+    DeleteDatabase("idarticle_people");
 
-    var aStruct = {
-        'people': [['name', false], ['email', false], ['created', false]]
-    }
-    CreateDatabase("idarticle_people",aStruct);
+    //var aStruct = {
+    //    'people': [['name', false], ['email', false], ['created', false]]
+    //}
+    //CreateDatabase("idarticle_people",aStruct);
 
     var IDB = window.indexedDB ||
         window.mozIndexedDB ||
@@ -45,7 +45,21 @@ function testID(){
         window.msIndexedDB ||
         window.shimIndexedDB;
 
-    var openRequest = IDB.open("idarticle_people");
+    var openRequest = IDB.open("idarticle_people",2);
+
+    openRequest.onupgradeneeded = function(e) {
+
+        var thisDB = e.target.result;
+
+        if(!thisDB.objectStoreNames.contains("people")) {
+            console.log("table people a créer1");
+            thisDB.createObjectStore("people",{autoIncrement:true});
+        }
+        else{
+            console.log("table people est deja créer");
+        }
+        console.log("people créé");
+    }
 
     openRequest.onsuccess = function(e) {
 
