@@ -3,7 +3,7 @@
     "use strict";
     document.addEventListener("DOMContentLoaded", function(event) {
         console.log("" + navigator.userAgent);
-        if (navigator.userAgent.match(/iPhone|IEMobile|Android/)) {
+        if (navigator.userAgent.match(/ipad|iPhone|IEMobile|Android/)) {
             document.addEventListener("deviceready", onReady, false);
         }
         else {
