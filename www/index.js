@@ -32,7 +32,6 @@ function testIDB(){
 
 function testID(){
     shimIndexedDB.__useShim();
-    setTimeout(function(){
     //DeleteDatabase("idarticle_people");
 
     var aStruct = {
@@ -61,7 +60,6 @@ function testID(){
     openRequest.onblocked = function (e) { console.log('blocked BDD'); }
 
     openRequest.onerror = function(e) {console.log("error");}
-        },1000);
 }
 
 
