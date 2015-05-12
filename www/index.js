@@ -3,7 +3,7 @@
     "use strict";
     document.addEventListener("DOMContentLoaded", function(event) {
         console.log("" + navigator.userAgent);
-        if (navigator.userAgent.match(/iPad|iPhone|IEMobile|Android/)) {
+        if (navigator.userAgent.match(/iPhone|IEMobile|Android/)) {
             document.addEventListener("deviceready", onReady, false);
         }
         else {
@@ -31,7 +31,9 @@ function testIDB(){
 }
 
 function testID(){
-    //window.shimIndexedDB.__useShim();
+    window.shimIndexedDB.__useShim();
+    console.log('ya le shim');
+    //console.log('ya pas le shim');
     DeleteDatabase("MyDatabase");
     //
     //var aStruct = {
