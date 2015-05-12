@@ -31,68 +31,56 @@ function testIDB(){
 }
 
 function testID(){
-    //shimIndexedDB.__useShim();
-    DeleteDatabase("idarticle_people");
-
-    //var aStruct = {
-    //    'people': [['name', false], ['email', false], ['created', false]]
-    //}
-    //CreateDatabase("idarticle_people",aStruct);
-
-    var IDB = window.indexedDB ||
-        window.mozIndexedDB ||
-        window.webkitIndexedDB ||
-        window.msIndexedDB ||
-        window.shimIndexedDB;
-
-    var openRequest = IDB.open("idarticle_people",2);
-
-    openRequest.onupgradeneeded = function(e) {
-
-        var thisDB = e.currentTarget.result;
-
-        thisDB.createObjectStore("people",{autoIncrement:true});
-
-        console.log("people créé");
+    window.shimIndexedDB.__useShim();
+    //DeleteDatabase("idarticle_people");
+    //
+    var aStruct = {
+        'MyObjectStore': [['id', false], ['first', false], ['last', false], ['age', false]]
     }
+    CreateDatabase("MyDatabase",aStruct);
 
-    openRequest.onsuccess = function(e) {
+    var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
+// Open (or create) the database
+    var open = indexedDB.open("MyDatabase");
 
-        console.log("running onsuccess");
+//// Create the schema
+//    open.onupgradeneeded = function() {
+//        var db = open.result;
+//        //var store = db.createObjectStore("MyObjectStore", {keyPath: "id"});
+//        //var index = store.createIndex("NameIndex", ["name.last", "name.first"]);
+//    };
 
-        db = e.target.result;
+    open.onsuccess = function() {
+        // Start a new transaction
+        var db = open.result;
+        var tx = db.transaction("MyObjectStore", "readwrite");
+        var store = tx.objectStore("MyObjectStore");
+        var index = store.index("NameIndex");
 
-        //Listen for add clicks
-        document.getElementById("addButton").addEventListener("click", addPerson, false);
+        // Add some data
+        store.put({id: 12345, name: {first: "John", last: "Doe"}, age: 42});
+        store.put({id: 67890, name: {first: "Bob", last: "Smith"}, age: 35});
+
+        // Query the data
+        var getJohn = store.get(12345);
+        var getBob = index.get(["Smith", "Bob"]);
+
+        getJohn.onsuccess = function() {
+            console.log(getJohn.result.name.first +" "+ getJohn.result.name.last);  // => "John"
+        };
+
+        getBob.onsuccess = function() {
+            console.log(getBob.result.name.first +" "+ getBob.result.name.last);   // => "Bob"
+        };
+
+        // Close the db when the transaction is done
+        tx.oncomplete = function() {
+            db.close();
+        };
     }
-    openRequest.onblocked = function (e) { console.log('blocked BDD'); }
-
-    openRequest.onerror = function(e) {console.log("error");}
 }
 
-
-function addPerson(e) {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
- 
-    console.log("About to add "+name+"/"+email);
-    //Define a person
-    var person = {
-        name:name,
-        email:email,
-        created:new Date()
-    }
- 
-    //Perform the add
-    InsertData("idarticle_people","people",[person]);
-    var a=document.createElement("p");
-    var b=document.createTextNode('ajout effectué');
-    a.appendChild(b);
-    document.getElementById("anduin").appendChild(a);
-
-                        
-    }
 
 
 function InsertDataTest() {

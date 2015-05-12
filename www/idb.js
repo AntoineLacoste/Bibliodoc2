@@ -30,7 +30,6 @@
         req.onblocked = function (e) { console.log('blocked BDD'); }
 
         // Si la BDD n'existe pas => Création structure BDD
-        console.log("je vais upgrade");
         req.onupgradeneeded = function (e) {
             // Récupération de la connexion
             dbHandle = e.target.result;
@@ -40,6 +39,8 @@
             for (var nomStore in objetStructure) {
                 var aIndex = objetStructure[nomStore];
                 // Création magasin
+                console.log("target : %o",dbHandle);
+                console.log("currentTarget : %o",e.currentTarget.result);
                 store = e.currentTarget.result.createObjectStore(nomStore, { keyPath: "id", autoIncrement: true });
                 // Parcours des index du magasin (champs en SQL)
                 for (var index in aIndex) {
