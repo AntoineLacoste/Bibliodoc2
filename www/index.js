@@ -51,13 +51,8 @@ function testID(){
 
         var thisDB = e.target.result;
 
-        if(!thisDB.objectStoreNames.contains("people")) {
-            console.log("table people a créer1");
-            thisDB.createObjectStore("people",{autoIncrement:true});
-        }
-        else{
-            console.log("table people est deja créer");
-        }
+        thisDB.createObjectStore("people",{autoIncrement:true});
+
         console.log("people créé");
     }
 
@@ -66,7 +61,7 @@ function testID(){
 
         console.log("running onsuccess");
 
-        db = e.target.result;
+        db = e.currentTarget.result;
 
         //Listen for add clicks
         document.getElementById("addButton").addEventListener("click", addPerson, false);
