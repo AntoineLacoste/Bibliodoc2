@@ -26,12 +26,29 @@ function testIDB(){
                 //// Création structure BDD
                 //CreateIdbBibliodoc();
                 //// Insertion jeu de test
-                //InsertDataTest();
-                testID();
+                //InsertDataTest();var url = Elipce.Ws.racine + "connexion/" + WinJS.Utilities.query('#login', element).get(0).value + "/" + pwd;
+    //Connexion au web service
+
+    var url="http://192.168.1.12/projects/bibliodoc-web/ws/index.php/elipce/7e54dad3d4b787512e80e6058a01ccecfef6b188";
+    WinJS.xhr({ url: url }).done(
+        function completed(result) {
+            if (result.status === 200) {
+                var rep = result.response;
+                var id = JSON.parse(rep);
+                // Connexion KO
+                if (id === false) {
+                    // Message
+                    catalogue.alertMssg("id : " + id, "Hèè");
+
+                }
+            }
+        });
+                //testID();
 }
 
 function testID(){
     window.shimIndexedDB.__useShim();
+    window.shimIndexedDB.__debug(true);
     console.log('ya le shim');
     //console.log('ya pas le shim');
     DeleteDatabase("MyDatabase");

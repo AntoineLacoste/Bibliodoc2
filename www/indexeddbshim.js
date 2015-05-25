@@ -1843,8 +1843,6 @@ var idbModules = {  // jshint ignore:line
 
         // Add the object store to WebSQL
         var transaction = db.__versionTransaction;
-        console.log('db : %o',db);
-        console.log('store : %o',store);
         idbModules.IDBTransaction.__assertVersionChange(transaction);
         transaction.__addToTransactionQueue(function createObjectStore(tx, args, success, failure) {
             function error(tx, err) {
@@ -1854,6 +1852,7 @@ var idbModules = {  // jshint ignore:line
             //key INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE
             var sql = ["CREATE TABLE", idbModules.util.quote(store.name), "(key BLOB", store.autoIncrement ? "UNIQUE, inc INTEGER PRIMARY KEY AUTOINCREMENT" : "PRIMARY KEY", ", value BLOB)"].join(" ");
             idbModules.DEBUG && console.log(sql);
+
             tx.executeSql(sql, [], function(tx, data) {
                 tx.executeSql("INSERT INTO __sys__ VALUES (?,?,?,?)", [store.name, JSON.stringify(store.keyPath), store.autoIncrement, "{}"], function() {
                     success(store);
