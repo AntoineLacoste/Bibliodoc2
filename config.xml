@@ -9,6 +9,5 @@
     </author> 
     <content src="index.html" />
     <gap:plugin name="org.apache.cordova.dialogs" />
-    <!--<gap:plugin name="com.msopentech.indexedDB" />-->
     <access origin="*" />
 </widget>

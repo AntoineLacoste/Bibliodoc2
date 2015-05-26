@@ -9,8 +9,9 @@
     <title>IndexedDb viewer</title>
 
     <!--Références externes -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="indexeddbshim.js"></script>
+    <script src="cordova.js"></script>
+    <script src="indexeddbshim.js"></script>
+    <script src="WinJS.js"></script>
     <script src="idb.js"></script>
     <script src="index.js"></script>
 </head>
@@ -19,6 +20,7 @@
         <input type="text" id="name" placeholder="Name"><br/>
         <input type="email" id="email" placeholder="Email"><br/>
         <button id="addButton">Add Data</button>
+        <p id="p"></p>
     </div>
 </body>
 </html>
