@@ -30,23 +30,8 @@ function testIDB(){
     //Connexion au web service
 
     document.getElementById('addButton').addEventListener('click',function() {
-        var url = "http://192.168.1.12/projects/bibliodoc-web/ws/index.php/connexion/elipce/7e54dad3d4b787512e80e6058a01ccecfef6b188";
-        WinJS.xhr({
-            url: url,
-            headers: {
-                "If-Modified-Since": "Mon, 27 Mar 1972 00:00:00 GMT"
-            }
-        }).done(
-            function completed(result) {
-                document.getElementById('p').innerHTML+= ' result status : '+result.status + ' id : ';
-                document.getElementById('p').innerHTML+= ' url: ' + url;
-                if (result.status === 200) {
-                    var rep = result.response;
-                    var id = JSON.parse(rep);
-                    console.log(id);
-                    document.getElementById('p').innerHTML+=id;
-                }
-            });
+
+        navigator.notification.alert('coucou',null,'coucou','coucou');
     });
                 //testID();
 }

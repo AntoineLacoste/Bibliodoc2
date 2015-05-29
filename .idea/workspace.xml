@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="382a64d7-d13c-4822-8313-2439902454e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/WinJS.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploiementWindows/Output/setup.exe" afterPath="$PROJECT_DIR$/deploiementWindows/Output/setup.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.js" afterPath="$PROJECT_DIR$/www/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,7 +32,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="527">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="374" max-vertical-offset="527">
               <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding />
             </state>
@@ -45,18 +42,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31898454" vertical-offset="255" max-vertical-offset="2601">
-              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.45033112" vertical-offset="153" max-vertical-offset="2346">
+              <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -197,6 +184,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -219,9 +207,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -231,9 +216,15 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="382a64d7-d13c-4822-8313-2439902454e3" name="Default" comment="" />
@@ -289,6 +280,198 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="527">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2720">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="323">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/WinJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1251897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/indexeddbshim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30865" max-vertical-offset="49878">
+          <caret line="1844" column="50" selection-start-line="1844" selection-start-column="50" selection-end-line="1844" selection-end-column="50" />
+          <folding>
+            <marker date="1431431505753" expanded="true" signature="65015:65062" placeholder="UPDATE __sys..." />
+            <marker date="1431431505753" expanded="true" signature="72595:72631" placeholder="INSERT INTO ..." />
+            <marker date="1431431505753" expanded="true" signature="73678:73714" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="73937:73971" placeholder="DELETE FROM ..." />
+            <marker date="1431431505753" expanded="true" signature="76403:76450" placeholder="SELECT * FRO..sqlite_sequence..." />
+            <marker date="1431431505753" expanded="true" signature="101148:101218" placeholder="CREATE TABLE..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="103279:103388" placeholder="CREATE TABLE..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="103443:103464" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="103887:103935" placeholder="UPDATE dbVer..." />
+            <marker date="1431431505753" expanded="true" signature="105479:105518" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="105705:105740" placeholder="INSERT INTO ..." />
+            <marker date="1431431505753" expanded="true" signature="107090:107127" placeholder="DELETE FROM ..." />
+            <marker date="1431431505753" expanded="true" signature="107596:107635" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="108283:108304" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="108646:108674" placeholder="DROP TABLE I..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/idb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="5950">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="527">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2720">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="323">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/WinJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1251897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/indexeddbshim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30865" max-vertical-offset="49878">
+          <caret line="1844" column="50" selection-start-line="1844" selection-start-column="50" selection-end-line="1844" selection-end-column="50" />
+          <folding>
+            <marker date="1431431505753" expanded="true" signature="65015:65062" placeholder="UPDATE __sys..." />
+            <marker date="1431431505753" expanded="true" signature="72595:72631" placeholder="INSERT INTO ..." />
+            <marker date="1431431505753" expanded="true" signature="73678:73714" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="73937:73971" placeholder="DELETE FROM ..." />
+            <marker date="1431431505753" expanded="true" signature="76403:76450" placeholder="SELECT * FRO..sqlite_sequence..." />
+            <marker date="1431431505753" expanded="true" signature="101148:101218" placeholder="CREATE TABLE..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="103279:103388" placeholder="CREATE TABLE..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="103443:103464" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="103887:103935" placeholder="UPDATE dbVer..." />
+            <marker date="1431431505753" expanded="true" signature="105479:105518" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="105705:105740" placeholder="INSERT INTO ..." />
+            <marker date="1431431505753" expanded="true" signature="107090:107127" placeholder="DELETE FROM ..." />
+            <marker date="1431431505753" expanded="true" signature="107596:107635" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="108283:108304" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="108646:108674" placeholder="DROP TABLE I..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/idb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="5950">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="527">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2720">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="323">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/WinJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1251897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/indexeddbshim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30865" max-vertical-offset="49878">
+          <caret line="1844" column="50" selection-start-line="1844" selection-start-column="50" selection-end-line="1844" selection-end-column="50" />
+          <folding>
+            <marker date="1431431505753" expanded="true" signature="65015:65062" placeholder="UPDATE __sys..." />
+            <marker date="1431431505753" expanded="true" signature="72595:72631" placeholder="INSERT INTO ..." />
+            <marker date="1431431505753" expanded="true" signature="73678:73714" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="73937:73971" placeholder="DELETE FROM ..." />
+            <marker date="1431431505753" expanded="true" signature="76403:76450" placeholder="SELECT * FRO..sqlite_sequence..." />
+            <marker date="1431431505753" expanded="true" signature="101148:101218" placeholder="CREATE TABLE..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="103279:103388" placeholder="CREATE TABLE..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="103443:103464" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="103887:103935" placeholder="UPDATE dbVer..." />
+            <marker date="1431431505753" expanded="true" signature="105479:105518" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="105705:105740" placeholder="INSERT INTO ..." />
+            <marker date="1431431505753" expanded="true" signature="107090:107127" placeholder="DELETE FROM ..." />
+            <marker date="1431431505753" expanded="true" signature="107596:107635" placeholder="SELECT * FRO..dbVersions..." />
+            <marker date="1431431505753" expanded="true" signature="108283:108304" placeholder="SELECT * FRO..__sys__..." />
+            <marker date="1431431505753" expanded="true" signature="108646:108674" placeholder="DROP TABLE I..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/idb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="5950">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="527">
@@ -544,7 +727,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="527">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="527">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding />
         </state>
@@ -552,7 +735,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+        <state vertical-scroll-proportion="0.18498367" vertical-offset="0" max-vertical-offset="919">
           <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding />
         </state>
@@ -560,8 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31898454" vertical-offset="255" max-vertical-offset="2601">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.45033112" vertical-offset="153" max-vertical-offset="2346">
+          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
           <folding />
         </state>
       </provider>
