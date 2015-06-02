@@ -1,10 +1,2 @@
-*~
-**~
-
-platforms/**
-
-node_modules
-src
-
-.idea
-*.iml
+# OS X
+.DS_Store
